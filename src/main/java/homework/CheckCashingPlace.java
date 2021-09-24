@@ -25,7 +25,9 @@ abstract class CheckCashingPlace implements IPayable {
         IPayable[] payablePeople = {h_employee, s_employee, entrepreneur};
         //HumanResources.payPerson(payablePeople); //returns pay of payable Person
         HumanResources.printPaymentInfo(entrepreneur); //prints payment info of a Person
-        HumanResources.payPerson(employees);
+
+        Person[] persons = {h_employee, s_employee, entrepreneur};
+        HumanResources.payPerson(persons);
 //        HumanResources.printPaymentInfo(payablePeople[0]);
 
 

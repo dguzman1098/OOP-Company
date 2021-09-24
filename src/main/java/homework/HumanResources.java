@@ -16,6 +16,7 @@ public class HumanResources  {
     //prints each employee in employees: badge Name, Type of employee, Hire date
     public static void issueBadge(Employee[] Employees){
         for (Employee employee : Employees){
+            System.out.println("BADGE");
             System.out.println("Name: " + employee.getName());
             System.out.println("Type of Employee: " + employee.getClass().getSimpleName());
             System.out.println("Hire Date: " + employee.getHireDate());
@@ -25,8 +26,9 @@ public class HumanResources  {
 
     //print out their payment information
     public static void printPaymentInfo(Person payable){
+        System.out.println("PAYMENT INFO");
         if (payable instanceof Employee || payable instanceof Entrepreneur){
-            System.out.print(payable.getName() + " \nAmount Paid: $");
+            System.out.print("Name: " + payable.getName() + " \nAmount Paid: $");
             payable.pay();
 
         }
@@ -45,6 +47,12 @@ public class HumanResources  {
                 System.out.println(((HourlyEmployee) person).getHourlyRate());
                 System.out.print("Hours Worked: ");
                 System.out.println(((HourlyEmployee) person).getHoursWorked());
+
+            }
+            if (person instanceof Entrepreneur){
+                System.out.print("Rate: $");
+                System.out.println(((Entrepreneur) person).getRate());
+
 
             }
         }
